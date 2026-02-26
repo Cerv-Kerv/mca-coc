@@ -14,85 +14,21 @@
 
   <div class="govuk-grid-row" style="margin-bottom: 50px">
         <h1 class="govuk-heading-xl" style="margin-top: 30px;">
-        Status indicators
+        Application overview screen
       </h1>
-      <h4 class="govuk-heading-s" style="margin-bottom: 0px !important; font-weight: 100;">Service working title:</h4><h3 class="govuk-heading-m">{{ serviceName }}</h3>
       </div>
         <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
+<p><a href="status" class="govuk-back-link">Back to status navigation</a></p>
 
-<table class="govuk-table">
-  <caption class="govuk-table__caption govuk-table__caption--m">Status key</caption>
-  <thead class="govuk-table__head">
-    <tr class="govuk-table__row">
-      <th scope="col" class="govuk-table__header">Details</th>
-      <th scope="col" class="govuk-table__header">Status</th>
-    </tr>
-  </thead>
-  <tbody class="govuk-table__body">
-    <tr class="govuk-table__row">
-      <td class="govuk-table__cell">The task/item/request asked of the user is<br> done and no further action is required.</td>
-      <td class="govuk-table__cell" style="text-align: right">
-        <strong class="govuk-tag" style="background-color: white;">
-          Complete
-        </strong></td>
-    </tr>
-                    <tr class="govuk-table__row">
-      <td class="govuk-table__cell">User has an exam booked</td>
-      <td class="govuk-table__cell" style="text-align: right">
-        <strong class="govuk-tag govuk-tag--green">
-          Booked
-        </strong></td>
-    </tr>
-    <tr class="govuk-table__row">
-      <td class="govuk-table__cell">User is required to do something</td>
-      <td class="govuk-table__cell" style="text-align: right">
-        <strong class="govuk-tag">
-          Action required
-        </strong></td>
-    </tr>
-                <tr class="govuk-table__row">
-      <td class="govuk-table__cell">User needs to book an exam</td>
-      <td class="govuk-table__cell" style="text-align: right">
-        <strong class="govuk-tag">
-          Not booked
-        </strong></td>
-    </tr>
-    <tr class="govuk-table__row">
-      <td class="govuk-table__cell">Item requires payment to be completed</td>
-      <td class="govuk-table__cell" style="text-align: right">
-        <strong class="govuk-tag govuk-tag--red">
-          Pending payment
-        </strong></td>
-    </tr>
-        <tr class="govuk-table__row">
-      <td class="govuk-table__cell">Item is being worked on by the MCA</td>
-      <td class="govuk-table__cell" style="text-align: right">
-        <strong class="govuk-tag govuk-tag--yellow">
-          Processing
-        </strong></td>
-    </tr>
-        <tr class="govuk-table__row">
-      <td class="govuk-table__cell">Indicates that a wider COC application is no longer <br>active due to an invalid NOE.<br><span class="govuk-hint">(Reapply history only)</span> </td>
-      <td class="govuk-table__cell" style="text-align: right">
-        <strong class="govuk-tag" style="background-color: white;">
-          Closed
-        </strong></td>
-    </tr>
-            <tr class="govuk-table__row">
-      <td class="govuk-table__cell">Application has been cancelled by the user<br><span class="govuk-hint">(Applications screen only)</span></td>
-      <td class="govuk-table__cell" style="text-align: right">
-        <strong class="govuk-tag govuk-tag--grey">
-          Cancelled
-        </strong></td>
-    </tr>
+<ul class="govuk-list govuk-list--bullet">
+  <li><a href="#1">1. New or reappyly (upto 2nd attempt)</a></li>
+  <li><a href="#2">2. Reapply (3+ attempts)</a></li>
+  <li><a href="#3">3. Non NOE</a></li>
 
-  </tbody>
-</table>
+</ul>
 
-
-    <h3 class="govuk-prototype-kit-task-list__section">Screen: Application overview</h3>
-    <h4 class="govuk-prototype-kit-task-list__section">1. COC application - new or reapplied (upto 2nd attempt)</h4>
+    <h3 class="govuk-prototype-kit-task-list__section" id="1">1. COC application - new or reapplied (upto 2nd attempt)</h4>
 
      <p><strong>1.1</strong> initial view when application is started (2 part oral exam)</p>
 
@@ -101,7 +37,7 @@
         items: [
           {
             title: {
-              text: "Apply for Notice of Eligibility (NoE)"
+              text: "Apply for Notice of Eligibility  (NOE)"
             },
                        href: "#",
             status: {
@@ -148,7 +84,7 @@
         items: [
           {
             title: {
-              text: "Apply for Notice of Eligibility (NoE)"
+              text: "Apply for Notice of Eligibility  (NOE)"
             },
                        href: "#",
             status: {
@@ -191,7 +127,7 @@
         items: [
           {
             title: {
-              text: "Apply for Notice of Eligibility (NoE)"
+              text: "Apply for Notice of Eligibility  (NOE)"
             },
                        href: "#",
                         status: {
@@ -240,7 +176,7 @@
         items: [
           {
             title: {
-              text: "Apply for Notice of Eligibility (NoE)"
+              text: "Apply for Notice of Eligibility  (NOE)"
             },
                        href: "#",
                          status: {
@@ -299,7 +235,7 @@
         items: [
           {
             title: {
-              text: "Apply for Notice of Eligibility (NoE)"
+              text: "Apply for Notice of Eligibility  (NOE)"
             },
                         status: {
               tag: {
@@ -344,7 +280,7 @@
         items: [
           {
             title: {
-              text: "Apply for Notice of Eligibility (NoE)"
+              text: "Apply for Notice of Eligibility  (NOE)"
             },
                         status: {
               tag: {
@@ -389,7 +325,7 @@
         items: [
           {
             title: {
-              text: "Apply for Notice of Eligibility (NoE)"
+              text: "Apply for Notice of Eligibility  (NOE)"
             },
              href: "#",
             status: {
@@ -435,7 +371,7 @@
         items: [
           {
             title: {
-              text: "Apply for Notice of Eligibility (NoE)"
+              text: "Apply for Notice of Eligibility  (NOE)"
             },
             status: {
                 text: "Complete"
@@ -483,7 +419,7 @@
         items: [
           {
             title: {
-              text: "Apply for Notice of Eligibility (NoE)"
+              text: "Apply for Notice of Eligibility  (NOE)"
             },
             status: {
                 text: "Complete"
@@ -535,7 +471,7 @@
         items: [
           {
             title: {
-              text: "Apply for Notice of Eligibility (NoE)"
+              text: "Apply for Notice of Eligibility  (NOE)"
             },
             status: {
                 text: "Complete"
@@ -586,7 +522,7 @@
         items: [
           {
             title: {
-              text: "Apply for Notice of Eligibility (NoE)"
+              text: "Apply for Notice of Eligibility  (NOE)"
             },
             status: {
                 text: "Complete"
@@ -640,7 +576,7 @@
         items: [
           {
             title: {
-              text: "Apply for Notice of Eligibility (NoE)"
+              text: "Apply for Notice of Eligibility  (NOE)"
             },
             status: {
                 text: "Complete"
@@ -693,7 +629,7 @@
         items: [
           {
             title: {
-              text: "Apply for Notice of Eligibility (NoE)"
+              text: "Apply for Notice of Eligibility  (NOE)"
             },
             status: {
                 text: "Complete"
@@ -747,7 +683,7 @@
         items: [
           {
             title: {
-              text: "Apply for Notice of Eligibility (NoE)"
+              text: "Apply for Notice of Eligibility  (NOE)"
             },
             status: {
                 text: "Complete"
@@ -798,16 +734,16 @@
       }) }}
 
 
-    <h4 class="govuk-prototype-kit-task-list__section">2. Reapply</h4>
+    <h3 class="govuk-prototype-kit-task-list__section" id="2">Reapply (3+ attempts)</h4>
 
-                 <p><strong>2.1</strong> 3rd attempt + </p>
+                 <p><strong>2.1</strong> initial view</p>
 
    {{ govukTaskList({
         idPrefix: "NOE-parts",
         items: [
           {
             title: {
-              text: "Apply for Notice of Eligibility (NoE)"
+              text: "Apply for Notice of Eligibility  (NOE)"
             },
                        href: "#",
             status: {
@@ -847,10 +783,52 @@
         ]
       }) }}
 
-    <h4 class="govuk-prototype-kit-task-list__section">3. Non NOE application</h4>
+        <p><strong>2.1.1</strong> inititial view (no part A exam) </p>
+
+   {{ govukTaskList({
+        idPrefix: "NOE-parts",
+        items: [
+          {
+            title: {
+              text: "Apply for Notice of Eligibility  (NOE)"
+            },
+                       href: "#",
+            status: {
+              tag: {
+                text: "Action required",
+                classes: "govuk-tag--blue"
+              }
+            }
+          },
+          {
+            title: {
+              text: "Provide supporting evidence"
+            },
+            href: "#",
+            status: {
+              tag: {
+                text: "Action required",
+                classes: "govuk-tag--blue"
+              }
+            }
+          },
+          {
+            title: {
+              text: "Make a payment"
+            }
+          },
+          {
+            title: {
+              text: "Pass oral exam"
+            }
+          }
+        ]
+      }) }}
+
+    <h3 class="govuk-prototype-kit-task-list__section" id="3">3. Non NOE</h4>
 
 
-     <p><strong>1.1</strong> initial view when application is started</p>
+     <p><strong>3.1</strong> initial view when application is started</p>
 
    {{ govukTaskList({
         idPrefix: "NOE-parts",

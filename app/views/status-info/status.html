@@ -1,0 +1,50 @@
+{% extends "layouts/pattern.html" %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {% from "govuk/components/header/macro.njk" import govukHeader %}
+{% from "govuk/components/service-navigation/macro.njk" import govukServiceNavigation %}
+
+
+{% endblock %}
+
+
+{% block content %}
+  <div class="govuk-grid-row" style="margin-bottom: 50px">
+        <h1 class="govuk-heading-xl" style="margin-top: 30px;">
+        Statuses for {{ serviceName }}
+      </h1>
+      </div>
+        <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+<p><a href="/index" class="govuk-back-link">Back to prototype main navigation</a></p>
+
+
+{{ govukTaskList({
+        idPrefix: "Status navigation",
+        items: [
+          {
+            title: {
+              text: "Status key"
+            },
+                       href: "key"
+          },
+          {
+            title: {
+              text: "Application overview"
+            },
+                       href: "status-app-overview"
+          },
+          {
+            title: {
+              text: "Applications"
+            },
+                       href: ""
+          }
+        ]
+      }) }}
+
+{% endblock %}
+</div>
+</div>
