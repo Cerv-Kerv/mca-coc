@@ -233,17 +233,8 @@ Apply for a Notification of Eligibility (NoE)
                 classes: "govuk-tag--blue"
               }
             }
-          }
-
-        ]
-      }) }}
-
-      <h2 class="govuk-heading-m">Other requirements</h2>
-
-      {{ govukTaskList({
-        idPrefix: "submission",
-        items: [
-                 {
+          },
+                          {
             title: {
               text: "Specified Area"
             },
@@ -254,7 +245,16 @@ Apply for a Notification of Eligibility (NoE)
                 classes: "govuk-tag--blue"
               }
             }
-          },
+          }
+
+        ]
+      }) }}
+
+      <h2 class="govuk-heading-m">Other requirements</h2>
+
+      {{ govukTaskList({
+        idPrefix: "submission",
+        items: [
           {
             title: {
               text: "SMarT funded status"
