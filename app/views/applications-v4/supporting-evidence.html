@@ -65,12 +65,6 @@
 <p class="govuk-body govuk-!-margin-bottom-7">You have completed X of XX sections.</p>
 
 
-{% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
-
-{{ govukInsetText({
-  text: "The supporting evidence you provide must be valid at the time of requesting your Certificate of Competency (CoC)"
-}) }}
-
 <h2 class="govuk-heading-m">Training and education</h2>
 
       {{ govukTaskList({
@@ -162,7 +156,7 @@
               text: "MCA written exams"
             },
                         hint: {
-              text: "Magnetic compass and navigational aids, Ship construction and stability, Shipboard operations"
+              text: "Magnetic Compass and Navigational Aids, Ship Construction and Stability, Shipboard Operations"
             },
             href: "coc/provide-mca-written-exams-mag-compass-aids-ship-construction-and-stability",
             status: {
