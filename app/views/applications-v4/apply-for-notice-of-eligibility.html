@@ -266,16 +266,8 @@ Apply for a Notification of Eligibility (NoE)
                 classes: "govuk-tag--blue"
               }
             }
-          }
-        ]
-      }) }}
-
-<h2 class="govuk-heading-m">Submission</h2>
-
-      {{ govukTaskList({
-        idPrefix: "submission",
-        items: [
-        {
+          },
+                  {
             title: {
               text: "Return-delivery address"
             },
@@ -286,7 +278,15 @@ Apply for a Notification of Eligibility (NoE)
                 classes: "govuk-tag--blue"
               }
             }
-          },
+          }
+        ]
+      }) }}
+
+<h2 class="govuk-heading-m">Submission</h2>
+
+      {{ govukTaskList({
+        idPrefix: "submission",
+        items: [
           {
             title: {
               text: "Declaration"

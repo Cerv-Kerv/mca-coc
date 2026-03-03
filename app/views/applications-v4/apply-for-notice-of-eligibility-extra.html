@@ -231,8 +231,16 @@ You need to <a href="#additonal_doc">provide additional documentation</a>  </str
             status: {
                 text: "Complete"
             }
-          }
-          ,
+          },
+          {
+            title: {
+              text: "Provide return-delivery address"
+            },
+            href: "provide-your-return-delivery-address",
+            status: {
+                text: "Complete"
+            }
+          },
           {
             title: {
               text: "Additional documentation"
@@ -253,15 +261,6 @@ You need to <a href="#additonal_doc">provide additional documentation</a>  </str
       {{ govukTaskList({
         idPrefix: "submission",
         items: [
-        {
-            title: {
-              text: "Provide return-delivery address"
-            },
-            href: "provide-your-return-delivery-address",
-            status: {
-                text: "Complete"
-            }
-          },
           {
             title: {
               text: "Declaration"

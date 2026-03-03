@@ -343,16 +343,7 @@
                 classes: "govuk-tag--blue"
               }
             }
-          }
-        ]
-      }) }}
-
-      <h2 class="govuk-heading-m">Submission</h2>
-
-      {{ govukTaskList({
-        idPrefix: "submission",
-        items: [
-        {
+          },        {
             title: {
               text: "Provide delivery address"
             },
@@ -363,13 +354,19 @@
                 classes: "govuk-tag--blue"
               }
             }
-          },
+          }
+        ]
+      }) }}
+
+      <h2 class="govuk-heading-m">Submission</h2>
+
+      {{ govukTaskList({
+        idPrefix: "submission",
+        items: [
           {
             title: {
               text: "Declaration"
             }
-
-            
           }
         
         ]
