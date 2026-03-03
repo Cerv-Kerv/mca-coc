@@ -61,19 +61,15 @@
       <h1 class="govuk-heading-l">
         Supporting evidence
       </h1>
+<p class="govuk-body govuk-!-margin-bottom-7">You have completed X of XX sections.</p>
 
 <div class="govuk-warning-text">
   <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
   <strong class="govuk-warning-text__text">
     <span class="govuk-visually-hidden">Warning</span>
-You need to provide additional documentation and resubmit your application</strong>
+You need to provide additional documentation and resubmit your application. <a href="/applications-v4/provide-additional-documents">Upload additional documentation</a></strong>
 </div>
 
-{% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
-
-{{ govukInsetText({
-  text: "The supporting evidence you provide must be valid at the time of requesting your Certificate of Competency (CoC)"
-}) }}
 
 <h2 class="govuk-heading-m">Training and education</h2>
 
@@ -217,7 +213,7 @@ You need to provide additional documentation and resubmit your application</stro
       }) }}
 
 
-      <h2 class="govuk-heading-m">Additional requirements</h2>
+      <h2 class="govuk-heading-m">Other requirements</h2>
       
 {{ govukTaskList({
         idPrefix: "id-medical",
