@@ -63,12 +63,6 @@
         Provide supporting evidence
       </h1>
 
-{% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
-
-{{ govukInsetText({
-  text: "The supporting evidence you provide must be valid at the time of requesting your Certificate of Competency (CoC)"
-}) }}
-
 <h2 class="govuk-heading-m">Training and education</h2>
 
       {{ govukTaskList({
@@ -211,7 +205,7 @@
       }) }}
 
 
-      <h2 class="govuk-heading-m">Additional requirements</h2>
+      <h2 class="govuk-heading-m">Other requirements</h2>
       
 {{ govukTaskList({
         idPrefix: "id-medical",
