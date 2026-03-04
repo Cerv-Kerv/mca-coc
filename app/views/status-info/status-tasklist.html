@@ -1,0 +1,84 @@
+{% extends "layouts/pattern.html" %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {% from "govuk/components/header/macro.njk" import govukHeader %}
+{% from "govuk/components/service-navigation/macro.njk" import govukServiceNavigation %}
+
+
+{% endblock %}
+
+
+
+{% block content %}
+
+  <div class="govuk-grid-row" style="margin-bottom: 50px">
+        <h1 class="govuk-heading-xl" style="margin-top: 30px;">
+        Tasklist screens
+      </h1>
+      </div>
+        <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+<p><a href="status" class="govuk-back-link">Back to status navigation</a></p>
+
+
+     <p><strong>1</strong> Task cannot be started yet</p>
+     <div class="govuk-hint">Task item name is not link and no status</div>
+
+ {{ govukTaskList({
+        idPrefix: "NOE-parts",
+        items: [
+          {
+            title: {
+              text: "Passport-style photo"
+            }
+          }
+        ]
+      }) }}
+<br><br><br>
+           <p><strong>2</strong> Task can be accessed</p>
+     <div class="govuk-hint">Task item name is a link and shows "Action required" status</div>
+
+ {{ govukTaskList({
+        idPrefix: "NOE-parts",
+        items: [
+          {
+            title: {
+              text: "Passport-style photo"
+            },
+            href: "#",
+            status: {
+              tag: {
+                text: "Action required",
+                classes: "govuk-tag"
+              }
+            }
+          }
+        ]
+      }) }}
+<br><br><br>
+                 <p><strong>3</strong> Task is completed</p>
+     <div class="govuk-hint">Task item name is not link and shows "Complete" status</div>
+
+ {{ govukTaskList({
+        idPrefix: "NOE-parts",
+        items: [
+          {
+            title: {
+              text: "Passport-style photo"
+            },
+            status: {
+                text: "Complete"
+            }
+          }
+        ]
+      }) }}
+<br><br><br>
+                 
+
+      </div>
+      </div>
+
+
+
+{% endblock %}
