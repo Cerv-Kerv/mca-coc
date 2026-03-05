@@ -2,7 +2,7 @@
 
 {% block pageTitle %}
   {% if data['confirm-error'] == 'true' or data['other-reason-error'] == 'true' %}Error: {% endif %}
-Provide additional documents – {{ serviceName }} – GOV.UK Prototype Kit
+Check additional documents – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
 {% block header %}
@@ -61,41 +61,46 @@ Provide additional documents – {{ serviceName }} – GOV.UK Prototype Kit
 
           <span class="govuk-caption-l">Other requirements</span>
       <h1 class="govuk-heading-l">
-Provide additional documents</h1>
+Check additional documents</h1>
 
-<p class="govuk">We require additional documents to support your application.</p>
-
-<p class="govuk">Upload evidence of the following:</p>
-
-<p>
-Document A<br>
+          {{ govukSummaryList({
+        classes: "govuk-!-margin-bottom-9",
+        rows: [
+          {
+            key: {
+              text: "Additional document uploads"
+            },
+            value: {
+              html: "Document A<br>
 Document B<br>
 Document C<br>
 Document D<br>
 Document EF<br>
 Document JK<br>
- Document LMNOP
-</p>
+ Document LMNOP"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: ""
+                }
+              ]
+            }
+          }
+        ]
+      }) }}
 
-<form action="check-additional-documents" method="post" enctype="multipart/form-data">
-  <div class="govuk-form-group">
-  {{ govukFileUpload({
-    id: "file-upload-1",
-    name: "file-upload-1",
-    hint: {
-      text: "Upload your documents as scanned copies or photos of the original."
-    },
-    label: {
-      text: "Upload your additional documents",
-      classes: "govuk-label--m"
-    },
-    javascript: true
-  }) }}
-</div>
-      <button type="submit" class="govuk-button" data-module="govuk-button">
-        Continue
-      </button>
-    </form>
+      <form action="supporting-evidence-declaration" method="post" novalidate>
+
+        <input type="hidden" name="answers-checked" value="true">
+
+        {{ govukButton({
+          text: "Save and continue"
+        }) }}
+
+      </form>
         
     </div>
   </div>
