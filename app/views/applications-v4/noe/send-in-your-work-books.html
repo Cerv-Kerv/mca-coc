@@ -85,28 +85,34 @@ Post your workbooks to:</p>
 Commercial Road<br> Southampton<br> SO15 1EG<br> United Kingdom"
 }) }}
 
-      {% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
-        
-        {{ govukCheckboxes({
-          idPrefix: "privacy",
-          name: "privacy-notice",
-          errorMessage: data['privacy-error'] == 'true' and {
-            text: "x"
-          },
-          fieldset: {
-            legend: {
-              text: "",
-              classes: "govuk-fieldset__legend"
-            }
-          },
-          items: [
-            {
-              value: "confirmed",
-              html: 'By checking the box, you confirm that you will send your workbooks to the Maritime and Coastguard Agency (MCA).',
-              checked: data['privacy-notice'] == 'confirmed'
-            }
-          ]
-        }) }}
+{% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
+
+{{ govukCheckboxes({
+  name: "nationality",
+  fieldset: {
+    legend: {
+      text: "Select to tell us if you:",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--m"
+    }
+  },
+  hint: {
+    text: "Check all that apply"
+  },
+  items: [
+    {
+      value: "workbookpost",
+      text: "will post your workbooks to the Maritime and Coastguard Agency (MCA) "
+    },
+    {
+      value: "etrb",
+      text: "also have an Electronic Training Record Book (eTRB) ",
+            hint: {
+        text: "If you have an eTRB, the MCA will contact you."
+      }
+    }
+  ]
+}) }}
 
 <form action="/applications-v4/apply-for-notice-of-eligibility" method="post" enctype="multipart/form-data">
       <button type="submit" class="govuk-button" data-module="govuk-button">
