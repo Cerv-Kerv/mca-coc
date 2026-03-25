@@ -54,51 +54,34 @@
     <div class="govuk-grid-column-two-thirds">
 
       <h1 class="govuk-heading-l">
-Cancel your [limitation] application</h1>
+Request to cancel your application for [limitation] 
+</h1>
 
 
-      <table class="govuk-table">
+<h2 class="govuk-heading-m">Information</h2>
+
+       <table class="govuk-table">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row"></tr>
+        </thead>
       <tbody class="govuk-table__body">
-      <th scope="row" class="govuk-table__header">Limitation</th>
-      <td class="govuk-table__cell">[Limitation]</td>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header govuk-!-width-one-half">Application</th>
+      <td class="govuk-table__cell govuk-!-width-one-half">[limitation]</td>
     </tr>
-            <tr class="govuk-table__row">
-      <th scope="row" class="govuk-table__header">Application cost</th>
-      <td class="govuk-table__cell">£[220.00]</td>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header govuk-!-width-one-half">Amount to pay</th>
+      <td class="govuk-table__cell govuk-!-width-one-half">£[XXX.XX]</td>
     </tr>
   </tbody>
 </table>
 
-
-{% from "govuk/components/warning-text/macro.njk" import govukWarningText %}
-
-
+<p></p>
 
 <form method="" novalidate>
-<h3 class="govuk-heading-m">Do you want to cancel your application?</h3>
-    {{ govukRadios({
-  idPrefix: "Pay online",
-  name: "redirect",
-  
-  items: [
-    {
-      value: "~application-cancel-confirmation",
-      text: "Yes"
-    },
-    {
-      value: "~/applications-v4/application-overview",
-      text: "No"
-    }
-  ]
-}) }}
-
-{{ govukWarningText({
-  text: "You will need to start a new application if you cancel.",
-  iconFallbackText: "Warning"
-}) }}
 
         {{ govukButton({
-          text: "Cancel application"
+          text: "Request cancellation"
         }) }}
 
       </form>
