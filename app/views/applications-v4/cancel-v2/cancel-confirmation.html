@@ -2,7 +2,7 @@
 
 {% block pageTitle %}
   {% if data['confirm-error'] == 'true' or data['other-reason-error'] == 'true' %}Error: {% endif %}
-  Request to cancel application confirmation – {{ serviceName }} – GOV.UK Prototype Kit
+  Application cancelled confirmation – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
 {% block header %}
@@ -55,22 +55,22 @@
     <div class="govuk-grid-column-two-thirds">
 
       {{ govukPanel({
-        titleText: "Cancellation request submitted"      }) }}
+        titleText: "Cancellation request submitted",
+        html: "Your reference number<br><strong>APP12345678</strong>"
+      }) }}
 
       <p>
-        We have sent you a confirmation email.
-      </p>
+We have sent you an email confirming that your cancellation request has been submitted.</p>
 
       <h2 class="govuk-heading-m">
         What happens next
       </h2>
 
       <p>
-We have sent your cancellation request to The Maritime and Coastguard Agency (MCA).</p>
+We have sent your cancellation request to The Maritime and Coastguard Agency (MCA). </p>
       <p>
-        The MCA will contact you.
-      </p>
-              <p><a href="">Return to applications</a></p>
+The MCA will contact you.       </p>
+
 
 
     </div>
