@@ -1,7 +1,6 @@
 {% extends "layouts/main.html" %}
 
 {% block pageTitle %}
-  {% if data['confirm-error'] == 'true' or data['other-reason-error'] == 'true' %}Error: {% endif %}
   Application overview – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
@@ -59,7 +58,7 @@
     <div class="govuk-grid-column-two-thirds">
 
             <span class="govuk-caption-l">
-['limitation']</span>      <h1 class="govuk-heading-xl">
+[limitation]</span>      <h1 class="govuk-heading-xl">
         Application overview
       </h1>
 
@@ -74,52 +73,35 @@
             title: {
               text: "Apply for Notice of Eligibility (NoE)"
             },
-                        status: {
-              tag: {
-                text: "Pending payment",
-                classes: "govuk-tag--orange"
-              }
-            }
-          },
-          {
-            title: {
-              text: "Make a payment"
-            },
-            href: "application-overview-resit-noA-3",
-            status: {
-              tag: {
-                text: "Action required",
-                classes: "govuk-tag"
-              }
-            }
-          },
-          {
-            title: {
-              text: "Pass Part A exam"
-            }
-          },
-          {
-            title: {
-              text: "Pass Part B exam"
-            }
-          },
-          {
-            title: {
-              text: "Provide supporting evidence"
-            },
-            href: "supporting-evidence",
-            status: {
+                                    href: "#",
+              status: {
               tag: {
                 text: "Action required",
                 classes: "govuk-tag--blue"
               }
             }
           },
+                    {
+            title: {
+              text: "Provide supporting evidence"
+            },
+              status: {
+              tag: {
+                text: "Pending payment",
+                classes: "govuk-tag--orange"
+              }
+          },
           {
             title: {
-              text: "Request Certificate of Competency"
+              text: "Make a payment"
+            }
+          },
+                    {
+            title: {
+              text: "Pass oral exam"
             }
           }
+        }
         ]
       }) }}
 
@@ -135,7 +117,7 @@
       <tbody class="govuk-table__body">
                         <tr class="govuk-table__row">
       <th scope="row" class="govuk-table__header govuk-!-width-one-half">Attempt</th>
-      <td class="govuk-table__cell govuk-!-width-one-half">2</td>
+      <td class="govuk-table__cell govuk-!-width-one-half">3</td>
     </tr>
     <tr class="govuk-table__row">
       <th scope="row" class="govuk-table__header govuk-!-width-one-half">Application</th>
