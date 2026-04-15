@@ -5,6 +5,8 @@
 
 const govukPrototypeKit = require('govuk-prototype-kit')
 const router = govukPrototypeKit.requests.setupRouter()
+const radioButtonRedirect = require('radio-button-redirect')
+router.use(radioButtonRedirect)
 
 // ============================================
 // VERSIONED ROUTES CONFIGURATION
@@ -13,8 +15,7 @@ const router = govukPrototypeKit.requests.setupRouter()
 const VERSIONS = [
   'ooe/v10',
   'ooe/v10_1',
-  'ooe/v10_2',
-  'coc/v1'
+  'ooe/v10_2'
 ]
 
 // ============================================
